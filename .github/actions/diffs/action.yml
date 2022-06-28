@@ -26,7 +26,8 @@ runs:
           - '!(explorer|doc|.github|sdk|wallet)/**'
           - '.github/workflows/bench.yml'
           - '.github/workflows/codecov.yml'
-          - '.github/workflows/rust.yml'
+          # TODO(bradh): don't commit this, just for testing.
+          # - '.github/workflows/rust.yml'
         isExplorerClient:
           - 'explorer/client/**'
           - '.github/workflows/explorer-client-prs.yml'
