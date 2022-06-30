@@ -233,4 +233,20 @@ mod test {
         validator.start().await.unwrap();
         validator.health_check().await.unwrap();
     }
+
+    #[tokio::test]
+    async fn test_reconfiguration() {
+        telemetry_subscribers::init_for_testing();
+        let mut swarm = Swarm::builder().build();
+
+        let validator = swarm.validators_mut().next().unwrap();
+
+        validator.start().await.unwrap();
+        let active = validator.active;
+        validator.stop();
+        validator.health_check().await.unwrap_err();
+
+        validator.start().await.unwrap();
+        validator.health_check().await.unwrap();
+    }
 }

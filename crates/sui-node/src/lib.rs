@@ -46,6 +46,7 @@ pub struct SuiNode {
     _post_processing_subsystem_handle: Option<tokio::task::JoinHandle<Result<()>>>,
     _gossip_handle: Option<tokio::task::JoinHandle<()>>,
     state: Arc<AuthorityState>,
+    active: Option<Arc<ActiveAuthority<NetworkAuthorityClient>>>,
 }
 
 impl SuiNode {
@@ -121,6 +122,7 @@ impl SuiNode {
 
         let should_start_follower = is_node || config.enable_gossip;
 
+        let mut active = None;
         let gossip_handle = if should_start_follower {
             let mut net_config = mysten_network::config::Config::new();
             net_config.connect_timeout = Some(Duration::from_secs(5));
@@ -165,6 +167,7 @@ impl SuiNode {
                 authority_clients,
                 gateway_metrics,
             )?);
+            active = Some(Arc::clone(&active_authority));
 
             Some(if is_validator {
                 // TODO: get degree from config file.
@@ -237,6 +240,7 @@ impl SuiNode {
             _batch_subsystem_handle: batch_subsystem_handle,
             _post_processing_subsystem_handle: post_processing_subsystem_handle,
             state,
+            active,
         };
 
         info!("SuiNode started!");
@@ -246,6 +250,10 @@ impl SuiNode {
 
     pub fn state(&self) -> Arc<AuthorityState> {
         self.state.clone()
+    }
+
+    pub fn active(&self) -> Option<Arc<ActiveAuthority<NetworkAuthorityClient>>> {
+        self.active.clone()
     }
 
     //TODO watch/wait on all the components

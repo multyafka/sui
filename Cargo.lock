@@ -6580,6 +6580,7 @@ version = "0.5.0"
 dependencies = [
  "anyhow",
  "async-trait",
+ "bcs",
  "clap 3.1.18",
  "colored",
  "futures",
