@@ -11,11 +11,11 @@ import { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Alert from '_components/alert';
-import BsIcon from '_components/bs-icon';
 import ExplorerLink from '_components/explorer-link';
 import { ExplorerLinkType } from '_components/explorer-link/ExplorerLinkType';
 import { useAppSelector } from '_hooks';
 import { txSelectors } from '_redux/slices/transactions';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import type { TransactionKindName } from '@mysten/sui.js';
 import type { RootState } from '_redux/RootReducer';

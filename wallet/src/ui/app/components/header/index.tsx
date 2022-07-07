@@ -5,7 +5,7 @@ import cl from 'classnames';
 import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import BsIcon from '_components/bs-icon';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import st from './Header.module.scss';
 

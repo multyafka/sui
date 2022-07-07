@@ -5,9 +5,9 @@ import cl from 'classnames';
 import { useMemo, useCallback } from 'react';
 
 import { API_ENV_TO_INFO, API_ENV } from '_app/ApiProvider';
-import BsIcon from '_components/bs-icon';
 import { useAppSelector, useAppDispatch } from '_hooks';
 import { changeRPCNetwork } from '_redux/slices/app';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import st from './Network.module.scss';
 

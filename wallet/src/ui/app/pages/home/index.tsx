@@ -38,7 +38,7 @@ const HomePage = () => {
             <Loading loading={guardChecking}>
                 <div className={st.container}>
                     <div className={st.header}>
-                        <Logo className={st.logo} txt={true} />
+                        <Logo className={st.logo} />
                     </div>
                     <div className={st.content}>
                         <Header />

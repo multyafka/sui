@@ -5,9 +5,9 @@ import { memo } from 'react';
 
 import AccountAddress from '_components/account-address';
 import Alert from '_components/alert';
-import BsIcon from '_components/bs-icon';
 import LoadingIndicator from '_components/loading/LoadingIndicator';
 import { useAppSelector } from '_hooks';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import type { ReactNode } from 'react';
 

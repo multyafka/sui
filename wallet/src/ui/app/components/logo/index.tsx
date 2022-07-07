@@ -3,21 +3,21 @@
 
 import classnames from 'classnames/bind';
 
+import SuiIcon, { SuiIcons } from '../sui-icon';
+
 import st from './Logo.module.scss';
 
 const cl = classnames.bind(st);
 
 type LogoProps = {
     size?: 'normal' | 'big' | 'bigger' | 'huge';
-    txt?: boolean;
     className?: string;
 };
 
-const Logo = ({ size = 'normal', txt = false, className }: LogoProps) => {
+const Logo = ({ size = 'normal', className }: LogoProps) => {
     return (
         <div className={cl('container', className)}>
-            <span className={cl('image', size)} />
-            {txt ? <span className={cl('txt', size)}>sui</span> : null}
+            <SuiIcon className={cl(size, 'icon')} icon={SuiIcons.SuiLogo} />
         </div>
     );
 };

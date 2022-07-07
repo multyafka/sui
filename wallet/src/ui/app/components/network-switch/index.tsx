@@ -6,9 +6,9 @@ import { useMemo, useCallback, useRef } from 'react';
 
 import NetworkSelector from './NetworkSelector';
 import { API_ENV_TO_INFO } from '_app/ApiProvider';
-import BsIcon from '_components/bs-icon';
 import { useAppSelector, useAppDispatch, useOnClickOutside } from '_hooks';
 import { setNetworkSelector } from '_redux/slices/app';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import st from './Network.module.scss';
 

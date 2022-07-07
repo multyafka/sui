@@ -5,10 +5,10 @@ import { memo, useMemo } from 'react';
 
 import { Explorer } from './Explorer';
 import { ExplorerLinkType } from './ExplorerLinkType';
-import BsIcon from '_components/bs-icon';
 import ExternalLink from '_components/external-link';
 import { useAppSelector } from '_hooks';
 import { activeAccountSelector } from '_redux/slices/account';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import type { ObjectId, SuiAddress, TransactionDigest } from '@mysten/sui.js';
 import type { ReactNode } from 'react';

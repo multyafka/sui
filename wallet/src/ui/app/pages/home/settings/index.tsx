@@ -5,7 +5,6 @@ import cl from 'classnames';
 import { useCallback, useEffect, useState } from 'react';
 
 import Alert from '_components/alert';
-import BsIcon from '_components/bs-icon';
 import ExplorerLink from '_components/explorer-link';
 import { ExplorerLinkType } from '_components/explorer-link/ExplorerLinkType';
 import ExternalLink from '_components/external-link';
@@ -15,6 +14,7 @@ import { useAppDispatch } from '_hooks';
 import { logout } from '_redux/slices/account';
 import { mintDemoNFT } from '_redux/slices/sui-objects';
 import { ToS_LINK } from '_shared/constants';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import type { SerializedError } from '@reduxjs/toolkit';
 

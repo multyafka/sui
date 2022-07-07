@@ -1,0 +1,29 @@
+@font-face {
+    font-family: sui-icons;
+    src: url('_assets/fonts/icons/sui-icons.eot?t=1657201313980'); /* IE9 */
+    src: url('_assets/fonts/icons/sui-icons.eot?t=1657201313980#iefix')
+            format('embedded-opentype'),
+        /* IE6-IE8 */ url('_assets/fonts/icons/sui-icons.woff2?t=1657201313980')
+            format('woff2'),
+        url('_assets/fonts/icons/sui-icons.woff?t=1657201313980') format('woff'),
+        url('_assets/fonts/icons/sui-icons.ttf?t=1657201313980')
+            format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+            url('_assets/fonts/icons/sui-icons.svg?t=1657201313980#sui-icons')
+            format('svg'); /* iOS 4.1- */
+}
+
+[class^='sui-icons-'],
+[class*=' sui-icons-'] {
+    font-family: sui-icons !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sui-icons-sui-logo::before {
+    content: '\ea01';
+}
+
+$sui-icons-sui-logo: '\ea01';

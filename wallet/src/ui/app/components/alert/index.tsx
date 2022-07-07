@@ -4,7 +4,7 @@
 import cl from 'classnames';
 import { memo } from 'react';
 
-import BsIcon from '_components/bs-icon';
+import BsIcon from '_src/ui/app/components/sui-icon';
 
 import type { ReactNode } from 'react';
 

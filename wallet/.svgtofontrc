@@ -1,0 +1,17 @@
+{
+    "src": "./src/ui/font-icons",
+    "dist": "./src/ui/assets/fonts/icons",
+    "fontName": "sui-icons",
+    "css": {
+        "output": "./src/ui/styles/typography",
+        "include": "\\.(scss)$",
+        "cssPath": "_assets/fonts/icons/",
+        "fileName": "sui-icons"
+    },
+    "outSVGReact": false,
+    "outSVGPath": false,
+    "typescript": {
+        "extension:": "ts"
+    },
+    "emptyDist": true
+}
